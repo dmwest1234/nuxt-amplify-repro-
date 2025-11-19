@@ -1,8 +1,8 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  ssr: false,
   modules: [
-    vuetify_hook,
     '@nuxt/eslint'
   ],
   nitro: {
@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     },
     routeRules: {
       '/api/**': { cors: true },
-      '/': { ssr: true },
+      '/': { ssr: false },
       '/static-test': { prerender: true }
     }
   },
